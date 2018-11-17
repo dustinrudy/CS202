@@ -49,6 +49,8 @@ rectangleType rectangleType::operator-(const rectangleType& otherRectangle) cons
     if(length && width > 0) {
         tempRect.length = length - otherRectangle.length;
         tempRect.width = width - otherRectangle.width;
+    } else {
+        cout << "Number cannot be negative";
     }
 
     return tempRect;

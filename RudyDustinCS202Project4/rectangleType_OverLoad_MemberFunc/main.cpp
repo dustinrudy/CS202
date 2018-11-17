@@ -13,7 +13,7 @@ if(yard1 > yard2) {
     cout << "yard 1 is Bigger than yard 2!" << endl;
 }
 
-yard1.setDimension(5, 5);
+yard1.setDimension(5, 5); 
 
 if(yard1 < yard2) {
     cout << "yard 1 is Smaller than yard 2!" << endl;
