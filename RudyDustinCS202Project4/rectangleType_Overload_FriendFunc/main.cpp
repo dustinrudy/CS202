@@ -1,6 +1,6 @@
 #include <iostream>
 #include "rectangleType.h"
-#include "rectangleTypeImp.cpp"
+#include "rectangleType.cpp"
 
 using namespace std;
 
