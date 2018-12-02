@@ -1,3 +1,6 @@
+#ifndef invalidDay_H
+#define invalidDay_H
+
 #include <iostream>
 #include <string>
 
@@ -21,3 +24,5 @@ public:
 private:
     string message;
 };
+
+#endif

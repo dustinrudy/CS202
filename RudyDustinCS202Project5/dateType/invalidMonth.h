@@ -1,3 +1,7 @@
+
+#ifndef invalidMonth_H
+#define invalidMonth_H
+
 #include <iostream>
 #include <string>
 
@@ -21,3 +25,5 @@ public:
 private:
     string message;
 };
+
+#endif

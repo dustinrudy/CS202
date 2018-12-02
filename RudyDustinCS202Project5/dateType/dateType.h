@@ -13,11 +13,11 @@ public:
 
     void print();
     
-    int setMonth(string date);
+    string setMonth(string date);
 
-    int setDay(string date);
+    string setDay(string date);
 
-    int setYear(string date);
+    string setYear(string date);
 
     string convertDateToFormal(string numDate);
 
@@ -28,9 +28,9 @@ public:
 
 private:
     string date;
-    int dMonth;
-    int dDay;
-    int dYear;
+    string dMonth;
+    string dDay;
+    string dYear;
 };
 
 #endif
