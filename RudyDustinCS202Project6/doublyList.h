@@ -348,30 +348,66 @@ void doublyLinkedList<Type>::deleteNode(const Type& deleteItem)
 template <class Type>
 void doublyLinkedList<Type>::copyList(const doublyLinkedList<Type>& otherList)
 {
-	cout << "The definition of this function is left as an exercise." << endl;
-	cout << "See Programming Execrise 11." << endl;
+	nodeType<Type> *newNode;
+    nodeType<Type> *current;
+
+    if(first != nullptr) {
+        destroy();
+    }
+
+    if(otherList.first == nullptr) {
+        first = nullptr;
+        last = nullptr;
+        count = 0;
+    } 
+    else {
+        current = otherList.first;
+        count = otherList.count;
+    
+        first = new nodeType<Type>;
+
+        first->info = current->info;
+        first->link = nullptr;
+
+        last = first;
+        current = current->link;
+
+        while (current != nullptr) {
+            newNode = new nodeType<Type>;
+            newNode->info = current->info;
+            newNode->link = nullptr;
+
+            last->link = newNode;
+            last = newNode;
+
+            current = current->link;
+                }
+            }   
+        
 }
 
 template <class Type>
 doublyLinkedList<Type>::doublyLinkedList(const doublyLinkedList<Type>& otherList)
 {
-	  cout << "The definition of the copy constructor is left as an exercise." << endl;
-	  cout << "See Programming Execrise 11." << endl;
+	 first = nullptr;
+     copyList(otherList);
 }
 
 template <class Type>
 const doublyLinkedList<Type>& doublyLinkedList<Type>::operator=
-							(const doublyLinkedList<Type> &)
+							(const doublyLinkedList<Type> & otherList)
 {
-	cout << "Overloading the assignment operator is left as an exercise." << endl;
-	cout << "See Programming Execrise 11." << endl;
+	if(this != &otherList) {
+        copyList(otherList);
+    }
+
+    return *this;
 }
 
 template <class Type>
 doublyLinkedList<Type>::~doublyLinkedList()
 {
-	cout << "Definition of the destructor is left as an exercise." << endl;
-	cout << "See Programming Execrise 11." << endl;
+	destroy();
 }
 
 #endif
